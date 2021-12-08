@@ -71,6 +71,12 @@ document.querySelectorAll("input").forEach((ele) => {
       persons = parseInt(ele.value);
     }
 
+    if (ele.value != 0) {
+      ele.style.outlineColor = "green";
+    } else {
+      ele.style.outlineColor = "red";
+    }
+
     if (bill && persons && percentage) {
       tip.innerHTML = `$${tipCalculation().toFixed(2)}`;
       tipTotal.innerHTML = `$${totalCalculation().toFixed(2)}`;
